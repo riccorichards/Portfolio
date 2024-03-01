@@ -1,0 +1,31 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.opened-option {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px var(--shadow-darken-color);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.opened-option span {
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  padding: 8px;
+  border-radius: 3.5px;
+}
+
+.opened-option span:hover {
+  background-color: var(--shadow-darken-color);
+}

@@ -1,0 +1,23 @@
+.certificates-wrapper {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.certificates-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.certitificate-img {
+  width: 135px;
+  height: 100px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.certitificate-img:hover {
+  opacity: 0.65;
+}

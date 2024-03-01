@@ -1,0 +1,12 @@
+.left-side {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  backdrop-filter: blur(55px);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px var(--shadow-main-color);
+  color: var(--darken-color);
+}

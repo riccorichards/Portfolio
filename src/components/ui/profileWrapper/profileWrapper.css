@@ -1,0 +1,15 @@
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--darken-color);
+  box-shadow: 0 0 10px var(--shadow-darken-color);
+}

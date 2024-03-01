@@ -1,0 +1,9 @@
+.main-div {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  height: 85vh;
+  margin: 0 auto;
+  gap: 15px;
+  position: relative;
+}

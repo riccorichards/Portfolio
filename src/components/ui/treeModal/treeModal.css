@@ -1,0 +1,26 @@
+.tree-modal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--darken-color);
+  padding: 15px;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 0 150px;
+}
+
+.close-chart-tree {
+  position: absolute;
+  bottom: calc(100% + 20px);
+  left: 98%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 2.5px;
+}

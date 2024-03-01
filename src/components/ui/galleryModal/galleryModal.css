@@ -1,0 +1,31 @@
+.gallery-wrapper {
+  position: absolute;
+  width: 80%;
+  margin: auto;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--shadow-darken-color);
+  background-color: var(--main-color);
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  flex: 1;
+}
+
+.gallery-image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.close-gallery {
+  cursor: pointer;
+}
