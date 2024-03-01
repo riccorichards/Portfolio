@@ -7,7 +7,6 @@ export interface ContextType {
   isOpenModal: boolean;
   setIsOpenModal: (v: boolean) => void;
   setIsOpenProfile: (v: boolean) => void;
-  setCertificate: (v: string | null) => void;
   setProjectId: (v: number | null) => void;
   setIsPlanTree: (v: boolean) => void;
 }

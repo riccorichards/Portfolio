@@ -4,7 +4,6 @@ import Main from "./components/shared/center/Main";
 import LeftSide from "./components/shared/letfSide/LeftSide";
 import RightSide from "./components/shared/rightSide/RightSide";
 import Context from "./context";
-import CertificateModal from "./components/ui/certificates/CertificateModal";
 import GalleryModal from "./components/ui/galleryModal/GalleryModal";
 import Networks from "./components/shared/networks/Networks";
 import TreeModal from "./components/ui/treeModal/TreeModal";
@@ -12,7 +11,6 @@ import ProfileModal from "./components/ui/ProfileModal/ProfileModal";
 
 function App() {
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
-  const [certificate, setCertificate] = useState<string | null>(null);
   const [projectId, setProjectId] = useState<number | null>(null);
   const [isPlanTree, setIsPlanTree] = useState<boolean>(false);
   const [isOpenProfile, setIsOpenProfile] = useState<boolean>(false);
@@ -29,9 +27,6 @@ function App() {
       window.removeEventListener("resize", handleScreenSize);
     };
   }, [screenSize]);
-  const closeModal = () => {
-    setIsOpenModal(false);
-  };
 
   const closeGallery = () => {
     setProjectId(null);
@@ -42,7 +37,6 @@ function App() {
     isOpenModal,
     setIsOpenModal,
     setIsPlanTree,
-    setCertificate,
     setProjectId,
   };
   return (
@@ -53,9 +47,6 @@ function App() {
         <Main />
         {screenSize > 850 ? <RightSide /> : null}
       </div>
-      {isOpenModal && (
-        <CertificateModal certificate={certificate} closeModal={closeModal} />
-      )}
       {projectId && (
         <GalleryModal projectId={projectId} closeGallery={closeGallery} />
       )}

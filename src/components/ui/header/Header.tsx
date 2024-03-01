@@ -3,6 +3,7 @@ import { IoIosMore } from "react-icons/io";
 import resumeFile from "../../../assets/RICHARD T.pdf";
 import "./header.css";
 import Context from "../../../context";
+import Utils from "../../../utils/Utils";
 const Header: FC<{ title?: string; Profile?: React.ComponentType }> = ({
   title,
   Profile,
@@ -13,16 +14,6 @@ const Header: FC<{ title?: string; Profile?: React.ComponentType }> = ({
   if (!getContext) throw new Error("Context is not defined");
 
   const { screenSize, setIsPlanTree, setIsOpenProfile } = getContext;
-
-  const handleDownloadResume = () => {
-    const link = document.createElement("a");
-    link.href = resumeFile;
-    link.download = "Richard_T_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setIsOpenOption(false);
-  };
 
   const handleMapTree = () => {
     setIsPlanTree(true);
@@ -42,7 +33,13 @@ const Header: FC<{ title?: string; Profile?: React.ComponentType }> = ({
       />
       {isOpenOption && (
         <div className="opened-option">
-          <span onClick={handleDownloadResume}>Download Resume</span>
+          <span
+            onClick={() =>
+              Utils.handleDownloadResume(resumeFile, "Richard_T_Resume.pdf")
+            }
+          >
+            Download Resume
+          </span>
           {screenSize > 850 ? null : (
             <span onClick={handleMapTree}>Show Plan</span>
           )}
