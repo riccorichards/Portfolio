@@ -1,6 +1,6 @@
 import React, { FC, useContext, useState } from "react";
 import { IoIosMore } from "react-icons/io";
-import resumeFile from "../../../assets/RICHARD T.pdf";
+import resumeFile from "../../../assets/Richards Trofimov.pdf";
 import "./header.css";
 import Context from "../../../context";
 import Utils from "../../../utils/Utils";
